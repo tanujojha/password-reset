@@ -21,6 +21,11 @@ if(client){
 app.use("/auth", authRoutes)
 
 
+app.get("/", (req, res)=>{
+    res.send("hello from server")
+})
+
+
 app.listen(PORT, ()=>{
     console.log("server connected on 5000");
 })

@@ -32,7 +32,7 @@ router.post("/fopa", async(req, res)=>{
                 text: "Go to this link and Authorize to reset your Password",
                 html: `<p>Go to this link to reset your password</p>
                         <br/>
-                        <a>http://localhost:3000/verify/${randString}</a>`
+                        <a>${process.env.CLIENT_URL}/verify/${randString}</a>`
             })
 
             if(info.messageId){
